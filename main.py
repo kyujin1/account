@@ -1,14 +1,14 @@
 class Account:
     def __init__(self, acc_id, balance, name):
-        self.acc_id = acc_id
-        self.balance = balance
-        self.name = name
+        self._acc_id = acc_id
+        self._balance = balance
+        self._name = name
 
     def get_acc_id(self):
-        return self.acc_id
+        return self._acc_id
 
     def deposit(self, money):
-        self._balance += self.balance
+        self._balance += money
 
     def withdraw(self, money):
         if self._balance < money:
@@ -55,7 +55,7 @@ def deposit_money():
         return
 
     for acc in acc_arr:
-        if acc.get_Acc_id() == acc_id:
+        if acc.get_acc_id() == acc_id:
             acc.deposit(money)
             print("입금 완료\n")
             return
