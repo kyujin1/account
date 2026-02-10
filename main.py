@@ -71,7 +71,7 @@ def withdraw_money():
         return
 
     for acc in acc_arr:
-        if acc.get_Acc_id() == acc_id:
+        if acc.get_acc_id() == acc_id:
             if acc.withdraw(money) == 0:
                 print("잔액 부족\n")
                 return
