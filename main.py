@@ -45,3 +45,20 @@ def make_account():
 
     acc_arr.append(Account(acc_id, balance, name))
 
+def deposit_money():
+    print("[입 금]")
+    try:
+        acc_id = int(input("계좌 ID : "))
+        money = int(input("입금액 : "))
+    except ValueError:
+        print("\n입력 형식이 올바르지 않습니다.\n")
+        return
+
+    for acc in acc_arr:
+        if acc.get_Acc_id() == acc_id:
+            acc.deposit(money)
+            print("입금 완료\n")
+            return
+    print("유효하지 않은 ID 입니다. \n")
+
+
