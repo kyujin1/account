@@ -83,3 +83,30 @@ def show_acc_acc_info():
     for acc in acc_arr:
         acc.show_info()
 
+def main():
+    MAKE, DEPOSIT, WITHDRAW, INQUIRE, EXIT = 1, 2, 3, 4, 5
+    while True:
+        show_menu()
+        try:
+            choice = int(input("선택(1~5까지의 숫자만 입력) :"))
+        except ValueError:
+            print("\n잘못된 선택\n")
+            continue
+        print()
+
+        if choice == MAKE:
+            make_account()
+        elif choice == DEPOSIT:
+            deposit_money()
+        elif choice == WITHDRAW:
+            withdraw_money()
+        elif choice == INQUIRE:
+            show_acc_acc_info()
+        elif choice == EXIT:
+            break
+        else:
+            print("잘못된 선택\n")
+
+if __name__ == "__main__":
+    main()
+
