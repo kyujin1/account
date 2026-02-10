@@ -22,3 +22,11 @@ class Account:
         print(f"잔액 : {self._balance}\n")
 
 acc_arr = []
+
+def show_menu():
+    print("메뉴")
+    print("1. 계좌 생성")
+    print("2. 입금")
+    print("3. 출금")
+    print("4. 계좌번호 전체 출력")
+    print("5. 프로그램 종료")
