@@ -30,3 +30,18 @@ def show_menu():
     print("3. 출금")
     print("4. 계좌번호 전체 출력")
     print("5. 프로그램 종료")
+
+def make_account():
+    print("[계좌 생성]")
+    try:
+        acc_id = int(input("게좌 ID : (숫자로 입력)"))
+        name = input("이름 : ")
+        balance = int(input("입금액 : "))
+        print()
+
+    except ValueError:
+        print("\n입력 형식이 올바르지 않습니다.\n")
+        return
+
+    acc_arr.append(Account(acc_id, balance, name))
+
